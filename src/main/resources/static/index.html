@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accenture Holidays (Bangalore)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Accenture Holidays</h1>
+    <p class="subtitle">Quick UI to explore holiday APIs</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Browse</h2>
+      <div class="controls grid-3">
+        <div class="control">
+          <label>All Mandatory</label>
+          <button id="btnMandatory" class="btn">Load</button>
+        </div>
+        <div class="control">
+          <label>All Floating</label>
+          <button id="btnFloating" class="btn">Load</button>
+        </div>
+        <div class="control">
+          <label for="monthSelect">By Month</label>
+          <div class="row">
+            <select id="monthSelect" class="input">
+              <option value="" selected>Select month…</option>
+              <option value="1">Jan</option>
+              <option value="2">Feb</option>
+              <option value="3">Mar</option>
+              <option value="4">Apr</option>
+              <option value="5">May</option>
+              <option value="6">Jun</option>
+              <option value="7">Jul</option>
+              <option value="8">Aug</option>
+              <option value="9">Sep</option>
+              <option value="10">Oct</option>
+              <option value="11">Nov</option>
+              <option value="12">Dec</option>
+            </select>
+            <select id="monthType" class="input">
+              <option value="mandatory">Mandatory</option>
+              <option value="floating">Floating</option>
+            </select>
+            <button id="btnByMonth" class="btn">Go</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Search</h2>
+      <div class="controls">
+        <div class="row">
+          <input id="searchKeyword" class="input flex" placeholder="Type a keyword e.g. independence" />
+          <button id="btnSearch" class="btn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="row space-between">
+        <h2>Results</h2>
+        <div id="resultMeta" class="muted"></div>
+      </div>
+      <div id="spinner" class="spinner hidden"></div>
+      <div id="error" class="error hidden"></div>
+      <div class="table-wrap">
+        <table id="resultsTable" class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Day</th>
+              <th>City</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+            <!-- rows injected here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel muted small">
+      <div>API quick links:
+        <a href="api/holidays/mandatory" target="_blank">api/holidays/mandatory</a>
+        · <a href="api/holidays/floating" target="_blank">api/holidays/floating</a>
+        · <a href="swagger-ui/index.html" target="_blank">Swagger UI</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

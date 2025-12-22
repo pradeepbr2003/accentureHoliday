@@ -27,6 +27,21 @@ java -jar target/accentureHoliday-0.0.1-SNAPSHOT.jar
 
 Tip: When running the jar from a different working directory, set a custom data file path (see Configuration) because the default path points to a file relative to the project root.
 
+## Simple UI
+
+A minimal static UI is available to explore the APIs without external tools.
+
+- Location: `src/main/resources/static/`
+- Entry page: `http://localhost:8080/` (serves `static/index.html`)
+- Features:
+  - Buttons to load all mandatory or all floating holidays
+  - Filters by month for mandatory/floating
+  - Case-insensitive search by name
+  - Results table with Name, Date, Day, City, Type
+  - Quick links to Swagger and raw endpoints
+
+If you configure a custom server context path, the UI uses relative links and should continue to work under that path.
+
 ## Project layout
 
 - `src/main/java/org/accenture/holiday` — Spring Boot app code
@@ -227,4 +242,3 @@ After pushing, GitHub Actions will automatically run the CI workflow defined in 
 ## License
 
 This project is intended for educational/demo purposes. No license is specified.
-"# accentureHoliday" 
